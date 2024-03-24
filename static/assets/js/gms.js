@@ -53,6 +53,8 @@ function addGms(name, imageUrl, onClickFunction, width, height) {
 var gms = {
     'GeForce Now': { imageUrl: "/assets/img/geforcenow.webp", onClick: geforce },
     '1v1.lol': { imageUrl: "/assets/img/1v1.webp", onClick: onevone },
+    'Stumble Guys': { imageUrl: "/assets/img/stumbleguys.webp", onClick: stumbleGuys, height: 130 },
+    'Minecraft': { imageUrl: "/assets/img/minecraft.webp", onClick: minecraft, height: 130 },
     'Slope': { imageUrl: "/assets/img/slope.webp", onClick: slope },
     'Jstris': { imageUrl: "/assets/img/jstris.webp", onClick: jstris },
     'Roblox': { imageUrl: "/assets/img/roblox.webp", onClick: rbx },
@@ -88,8 +90,7 @@ var gms = {
     'Stickman Hook': { imageUrl: "/assets/img/stickmanhook.webp", onClick: stickManHook, height: 130 },
     'Kick The Buddy': { imageUrl: "/assets/img/super-buddy-kick.webp", onClick: kickTheBuddy, height: 130 },
     'Fireboy and Watergirl': { imageUrl: "/assets/img/fireboy-and-watergirl.webp", onClick: fBwG1, height: 130 },
-    'Stumble Guys': { imageUrl: "/assets/img/stumbleguys.webp", onClick: stumbleGuys, height: 130 },
-    'Minecraft': { imageUrl: "/assets/img/minecraft.webp", onClick: minecraft, height: 130 },
+
 };
 for (var gmsName in gms) {
     if (gms.hasOwnProperty(gmsName)) {
