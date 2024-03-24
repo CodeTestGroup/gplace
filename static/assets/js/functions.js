@@ -253,5 +253,3 @@ function vAG() {
 if (window.location.protocol === "http:") {
   window.location.href = window.location.href.replace("http:", "https:");
 }
-
-console.log("%cJoin our Discord! discord.gg/unblocking", "color: cyan; font-size: 20px");
