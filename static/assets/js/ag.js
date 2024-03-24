@@ -120,6 +120,14 @@ function basketBros() {
   openAg('https://derpman.codeberg.page/echo/@main/basketbros-io/');
 }
 
+function minecraft() {
+  openAg('https://classic.minecraft.net/');
+}
+
+function stumbleGuys() {
+  openAg('https://stumbleguys.com/');
+}
+
 function bitlife() {
   openAg('https://derpman.codeberg.page/echo/@main/bitlife/index.html');
 }
