@@ -99,6 +99,14 @@ function netflix() {
   openAg('https://netflix.com');
 }
 
+function nealfun() {
+  openAg('https://neal.fun');
+}
+
+function poki() {
+  openAg('https://poki.com');
+}
+
 function symbolab() {
   openAg('https://www.symbolab.com');
 }
