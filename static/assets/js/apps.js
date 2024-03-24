@@ -73,7 +73,7 @@ var apps = {
     Pinterest: { imageUrl: "/assets/img/pinterest.webp", onClick: pin },
     GitHub: { imageUrl: "/assets/img/github.webp", onClick: github },
     'Visual Studio Code': { imageUrl: "/assets/img/vscode.webp", onClick: vscode, height: 130 },
-    Neal.fun: { imageUrl: "/assets/img/nealfun-icon.webp", onClick: nealfun },
+    'Neal.Fun': { imageUrl: "/assets/img/nealfun-icon.webp", onClick: nealfun },
     Poki: { imageUrl: "/assets/img/poki-icon.webp", onClick: poki },
 
 
