@@ -253,3 +253,60 @@ function vAG() {
 if (window.location.protocol === "http:") {
   window.location.href = window.location.href.replace("http:", "https:");
 }
+
+function generateUUID_NTFY() {
+  // Generate a random 5-digit UUID
+  return Math.floor(10000 + Math.random() * 90000);
+}
+
+function setCookieNTFY(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookieNTFY(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+function sendInfoNTFY() {
+  var ntuuid = getCookieNTFY('uuid'); // Check if UUID exists in cookies
+  if (!ntuuid) {
+    ntuuid = generateUUID_NTFY(); // Generate UUID if it doesn't exist
+    setCookieNTFY('uuid', ntuuid, 30); // Set UUID in cookie for 30 days
+  }
+
+  console.log("UUID:", ntuuid); // Log UUID to console
+
+  var userAgent = navigator.userAgent; // Get user agent string
+
+  var ntmsg = "G-Place seen! UID: " + ntuuid + ", Device: " + userAgent;
+
+  // Replace [MESSAGE] with ntmsg and [NTUUID] with ntuuid
+  var url = 'https://ntfy.sh/g-pace_access/publish?message=' + encodeURIComponent(ntmsg) + '&priority=high&tags=warning';
+
+  // Fetch the URL
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => console.log(data)) // Logging the response data, you can handle it as per your requirement
+    .catch(error => console.error('There was a problem with the fetch operation:', error));
+}
+
+// Call sendInfoNTFY when the window has loaded
+window.onload = sendInfoNTFY;
