@@ -52,7 +52,7 @@ function addGms(name, imageUrl, onClickFunction, width, height) {
 
 var gms = {
     'GeForce Now': { imageUrl: "/assets/img/geforcenow.webp", onClick: geforce },
-    '1v1.lol': { imageUrl: "/assets/img/1v1.webp", onClick: onevone },
+   // '1v1.lol': { imageUrl: "/assets/img/1v1.webp", onClick: onevone },
     'Stumble Guys': { imageUrl: "/assets/img/stumbleguys.webp", onClick: stumbleGuys, height: 130 },
     'Minecraft': { imageUrl: "/assets/img/minecraft.webp", onClick: minecraft, height: 130 },
     'Slope': { imageUrl: "/assets/img/slope.webp", onClick: slope },
